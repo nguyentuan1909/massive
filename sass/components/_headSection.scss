@@ -1,0 +1,27 @@
+.headSection {
+    text-align: center;
+    margin-bottom: $m-4;
+    h2 {
+        @include styleText($fs-2, $fw-0, $color-gray-6);
+        margin-bottom: $m-2;
+        letter-spacing: $ls-0 + 1;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: $color-gray-2;
+            margin: auto;
+            margin-top: $m-1 - 2;
+
+        }
+    }
+
+    p {
+        color: $color-gray-0;
+        width: 60%;
+        margin: 0 auto;
+        line-height: 25px;
+    }
+}

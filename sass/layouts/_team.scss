@@ -1,0 +1,126 @@
+.massiveTeam{
+    padding: $p-6 0;
+    .massiveTeam__content{
+
+        .massiveTeam__teamImg{
+            padding-top: $p-9;
+
+        
+            .massiveTeam__itemImg{
+                position: relative;
+                overflow: hidden;
+                
+                .massiveTeam__overlay{
+                    @extend %overlay;
+                    .overlay__text{
+                        position: absolute;
+                        top: 0;
+                        transform: translateY(-55%);
+                        padding: 0 $p-9;
+                        transition: all .3s .2s ease;
+                        opacity: 0;
+                        h4{
+                            margin-bottom: $m-2 + 5;
+                            letter-spacing: $ls-1 - 2;
+                            @include styleText($fs-0 + 2, $fw-2, $color-black-0);
+                        }
+                        p{
+                            @include styleText($fs-0 + 2, $fw-2, $color-gray-0);
+                            line-height: $lh-3;
+                        }
+                    }
+
+                    .overlay__social{
+                        transition: all .3s .2s ease;
+                        position: absolute;
+                        bottom: 0;
+                        transform: translateY(45%);
+                        text-align: center; 
+                        width: 100%;
+                        opacity: 0;
+                        a{
+                            @include styleText($fs-1 - 4, $fw-2, $color-black-0);
+                            margin: 0 $m-0;
+                            transition: all .3s ease;
+
+                            &:hover{
+                                color: $color-yellow-0;
+                            }
+                        }
+
+                    }
+
+                }
+                img{
+                    width: 100%;
+                }
+                .item__intro{
+                    width: 70%;
+                    padding: $p-1 - 2 $p-9;
+                    position: absolute;
+                    bottom: 30px;
+                    right: 0;
+                    background-color: $color-black-6;
+                    text-align: right;
+                    p{
+                        margin: 0;
+                        letter-spacing: $ls-0 + 1;
+                        @include styleText($fs-0, $fw-2, $color-white-2);
+                    }
+                    h5{
+                        @include styleText($fs-0 + 2, $fw-2, $color-white-0);
+                        letter-spacing: $ls-0 + 1;
+                    }
+                   
+                }
+                &:hover{
+                    .massiveTeam__overlay{
+                        .overlay__text{
+                            top: 35%;
+                            opacity: 1;
+                        }
+                        .overlay__social{
+                            bottom: 10%;
+                            opacity: 1;
+                        }
+                    }      
+                }
+            }
+            
+            
+        }
+    }
+
+    .massiveTeam__hiring{
+        margin: $m-6 0  0;
+        padding:  $p-4;
+        background-color: $color-gray-13;
+        .massiveTeam__left{
+            h4{
+                @include styleText($fs-1 - 2, $fw-2, $color-gray-6);
+                letter-spacing: $ls-0;
+                span{
+                    color: $color-yellow-0;
+                }
+                margin: 0;
+            }
+            p{
+                @include styleText($fs-0 + 3, $fw-2, $color-gray-0);
+                margin: 0;
+                margin-top: $m-0;
+            }
+        }
+        .massiveTeam__right{
+            text-align: right;
+        }
+    }
+
+    @include responsive('md'){
+        .massiveTeam__hiring{
+            .massiveTeam__right{
+                text-align: left;
+                margin-top: $m-2;
+            }
+        }
+    }
+}

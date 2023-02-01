@@ -1,0 +1,107 @@
+footer{
+
+    .footer__top{
+        background-color: $color-black-0;
+        padding: $p-10 0;
+        .footer__logo{
+            margin-bottom: $m-2;
+            display: inline-block;
+        }
+
+        p{
+            @include styleText($fs-0 + 3, $fs-0, $color-gray-0);
+            margin-bottom: $m-3;
+            line-height: $lh-3;
+        }
+
+        h3{
+            @include styleText($fs-0 + 2, $fw-0, $color-white-0);
+            letter-spacing: $ls-0;
+            margin-bottom: $m-3;
+        }
+
+        nav{
+            .nav-link{
+                
+                padding: 0;
+                border-bottom: 1px solid $color-gray-6;
+                @include styleText($fs-0 + 3, $fw-0, $color-gray-19);
+                line-height: $lh-4;
+                transition: all .3s ease;
+                i{
+                    padding-right: $p-1 + 3;
+                }
+                &:hover{
+                    color: $color-yellow-0;
+                }
+            }
+        }
+
+        .footer__img{
+            .img__item{
+                padding: 0 ;
+                width: 55px;
+                margin: 0 $m-0 $m-0 0;
+                img{
+                    max-width: 100%;
+                 }
+            }
+            
+        }
+    }
+
+    .footer__bottom{
+        background-color: $color-black-7;
+        padding: $p-3 0;
+        border-top: 1px solid $color-black-8;
+        .footer__text{
+            margin-top: $m-0;
+            p{
+                margin: 0;
+                color: $color-gray-4;
+                a{
+                    color: $color-white-0;
+                    text-decoration: none;
+                    transition: all .3s ease;
+                    &:hover{
+                        color: $color-yellow-0;
+                    }
+                }
+            }
+        }
+
+        .footer__social{
+            a{
+                width: 35px;
+                height: 35px;
+                text-align: center;
+                line-height: 35px;
+                border: 1px solid $color-gray-8;
+                border-radius: 50%;
+                display: inline-block;
+                text-decoration: none;
+                @include styleText($fs-1, $fw-0,$color-gray-8);
+                margin-right: $m-1;
+                transition: all .3s ease;
+                &:hover{
+                    color: $color-white-0;
+                    border-color: transparent;
+                    background-color: $color-gray-8;
+                }
+            }
+        }
+    }
+    @include responsive(lg){
+        .footer__top{
+            nav{
+                margin-bottom: $m-8;
+            }
+        }
+        .footer__bottom{
+            .footer__social{
+                margin-top: $m-0;
+            }
+        }
+        
+    }
+}

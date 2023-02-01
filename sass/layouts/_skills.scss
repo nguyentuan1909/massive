@@ -1,0 +1,114 @@
+.massiveSkills{
+    padding: $p-6 0;
+    position: relative;
+    @extend %backgroundImg;
+    background-image: url(../images/4.jpg);
+    background-attachment: fixed;
+    .massiveSkills__overlay{
+        background-color: $color-black-1;
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .massiveSkills__content{
+        position: relative;
+   
+      .massiveSkills__col{
+        padding-left: $p-2;
+        padding-right: $p-2;
+      }
+       .massiveSkills__left{
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        h2{
+            text-align: center;
+            @include styleText($fs-2, $fw-0,$color-white-0);
+            letter-spacing: $ls-1;
+        }
+       }
+
+       .massiveSkills__right{
+        
+        padding: 0 $p-2;
+         p:first-of-type{
+            @include styleText($fs-1 - 2, $fw-0, $color-white-0);
+            margin-bottom: $m-3;
+            letter-spacing: $ls-0 + 1;
+         }
+
+         p:last-of-type{
+            @include styleText($fs-0 + 3, $fw-0, $color-white-0);
+            line-height: $lh-3;
+            margin-bottom: $m-3;
+         }
+
+         .massiveSkills__progress{
+            padding-top: $p-2;
+            .progress__item{
+                height: 20px;
+                margin: $m-0 auto $m-4;
+                background-color: $color-gray-1;
+                .progress__itemBar{
+                    height: 100%;
+                    width: 0;
+                    background-color: $color-white-0;
+                    @include styleText($fs-0 - 2, $fw-0, $color-black-0);
+                    padding-left: $p-1 - 2;
+                    line-height: $lh-1 - 4;
+                    position: relative;
+                    transition: width .6s ease;
+                    .progress__indicator{
+                        position: absolute;
+                        top: -28px ;
+                        right: -5px;
+                        height: 20px;
+                        min-width: 25px;
+                        line-height: $lh-1 - 4;
+                        border-radius: $br-1;
+                        background-color: $color-gray-11;
+                        text-align: center;
+                        padding: 0 $p-1 - 4;
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            height: 5px;
+                            width: 5px;
+                            display: block;
+                            background-color: $color-gray-11;
+                            left: 50%;
+                            transform: rotate(45deg) translateX(-50%);
+                            bottom: -4px;
+
+                            
+                        }
+                    }
+                    &.progress__ani{
+                       
+                        &.item1{
+                            width: 80%;
+                        }
+                        &.item2{
+                            width: 90%;
+                        }
+                        &.item3{
+                            width: 75%;
+                        }
+                    }
+                   
+                }
+            }
+         }
+       }
+    }
+
+    @media screen and (max-width: 800px) {
+                .massiveSkills__overlay{
+                    display: none;
+                }
+    }
+}

@@ -1,0 +1,28 @@
+%backgroundImg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+%container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 $p-1 + 3;
+}
+
+%overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 20px solid $color-black-5;
+    background-color: $color-white-1;
+    text-align: center;
+    transition: all .3s ease;
+    opacity: 0;
+    z-index: 10;
+    &:hover{
+        opacity: 1;
+    }
+}

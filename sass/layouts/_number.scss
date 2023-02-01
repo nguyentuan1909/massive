@@ -1,0 +1,47 @@
+.massiveNumber{
+    background-color: $color-black-7;
+    padding: $p-6 0;
+    .massiveNumber__content{
+        text-align: center;
+        .massiveNumber__icon{
+            @include styleText($fs-4, $fw-0, $color-white-0);
+           margin-bottom: $m-0;
+           text-align: center;
+            p{
+                margin: 0 ;
+                margin-left: $m-0 + 2;
+                line-height: 1.5;
+                display: inline-block;
+                letter-spacing: $ls-0;
+            }
+        }
+        p{
+            color: $color-white-0;
+            letter-spacing: $ls-0;
+            margin: 0;
+          
+        }
+    }
+    @include responsive(lg){
+        .massiveNumber__content{
+
+            .massiveNumber__item{
+                padding: $p-9 0;
+            }
+        }
+    }
+    @include responsive(md){
+        .massiveNumber__content{
+
+            .massiveNumber__item{
+                padding: $p-2 0;
+            }
+
+            .massiveNumber__icon{
+               
+                p{
+                    font-size: $fs-2 + 2;
+                }}
+        }
+    }
+}

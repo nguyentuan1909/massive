@@ -1,0 +1,13 @@
+.massivePartner {
+    padding: $p-6 0;
+
+    .massivePartner__content {
+        .massivePartner__carousel {
+            padding: 0 $p-1 + 3;
+        }
+
+        .item {
+            margin: $m-2;
+        }
+    }
+}

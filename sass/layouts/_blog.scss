@@ -1,0 +1,99 @@
+.massiveBlog {
+    padding: $p-6 0;
+    .massiveBlog__content {
+
+        .massiveBlog__post {
+            margin-top: $m-6;
+
+            figure {
+                position: relative;
+                margin-bottom: 0;
+                img {
+                    width: 100%;
+                }
+
+                figcaption {
+                    @include styleText($fs-0 + 3, $fw-0, $color-white-0);
+                    background-color: $color-black-1;
+                    padding: $p-1 - 2;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                }
+            }
+
+
+            .massiveBlog__right {
+                margin-top: $p-2;
+
+                a {
+                    text-decoration: none;
+                    @include styleText($fs-0, $fw-0, $color-gray-14);
+                    letter-spacing: $ls-0;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        color: $color-yellow-0;
+                    }
+                }
+
+                .massiveBlog__categories {
+                    margin-bottom: $m-0;
+
+                    a:last-child {
+                        margin-left: $m-0;
+                    }
+                }
+
+                h3 {
+                    margin-bottom: $m-0;
+                    transition: all .3s ease;
+                    @include styleText($fs-1 - 2, $fw-0, $color-black-0);
+
+                    &:hover {
+                        color: $color-yellow-0;
+                    }
+                }
+
+                .massiveBlog__info {
+                    margin-bottom: $m-2 + 5;
+
+                    span {
+                        letter-spacing: $ls-0 + 1;
+                        @include styleText($fs-0, $fw-0, $color-gray-14);
+                    }
+
+                    a {
+                        letter-spacing: $ls-0 + 1;
+
+                        &:after {
+                            content: "|";
+                            padding-left: $p-1 - 2;
+                            padding-right: $p-1 - 4;
+                        }
+                    }
+                }
+
+                p {
+                    line-height: $lh-1 + 6;
+                    margin-bottom: $m-3;
+                    color: $color-gray-0;
+                }
+
+                .readMore {
+                    @include styleText($fs-0 + 3, $fw-0, $color-gray-15);
+
+                    &:hover {
+                        color: $color-black-0;
+                    }
+
+                    i{
+                        margin-left: $m-0;
+                    }
+                }
+            }
+
+        }
+    }
+}

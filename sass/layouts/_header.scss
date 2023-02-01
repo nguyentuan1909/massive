@@ -1,0 +1,156 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    transition: all .3s;
+    &.fixedNavbar {
+        background-color: $color-black-4;
+    }
+
+    .container-fluid {
+        padding: 0 $p-2;
+    }
+
+    nav {
+
+        &.navbar {
+            padding: 0;
+            flex-wrap: wrap;
+            .navbar-brand {
+                padding: 0;
+                height: $lh-5;
+                transition: all .3s;
+                
+                &.fixedNavbar {
+                    height: $lh-2;
+                    
+                }
+
+                img {
+                    max-height: 100%;
+                    padding: $p-8 0;
+                }
+            }
+        }
+
+        #navbarMassive {
+
+            .navbar-nav {
+                flex-wrap: wrap;
+                .nav-item {
+                    padding: 0 $p-1;
+                    margin-left: $m-7;
+
+                    .nav-link {
+                        @include styleText($fs-0 + 1, $fw-0, $color-white-0);
+                        text-transform: uppercase;
+                        padding: 0;
+                        letter-spacing: .5px;
+                        line-height: $lh-5;
+                        transition: all .3s;
+                        &.fixedNavbar {
+                            line-height: $lh-2;
+                        }
+                        & i {
+
+                            margin-right: $m-7 + 3;
+                        }
+
+                        &.active,
+                        &:hover {
+                            color: $color-yellow-0;
+                        }
+
+                        &.nav-divider {
+                            cursor: text;
+                        }
+
+                        & span {
+                            margin-left: $m-7 + 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .navbar-toggler {
+            span {
+                @include styleText($fs-2, $fw-0, $color-white-0);
+            }
+        }
+
+    }
+
+    @include responsive('md') {
+
+        .container-fluid {
+            background-color: $color-black-4;
+
+        }
+
+        nav {
+            &.navbar {
+                .navbar-brand {
+                    height: 50px !important;
+                }
+            }
+
+            #navbarMassive {
+                .navbar-nav {
+                    background-color: $color-white-0;
+                    max-height: 400px;
+                    overflow: auto;
+                    flex-wrap: nowrap;
+                    .nav-item {
+                        padding: 0;
+
+                        .nav-link {
+                            color: $color-gray-6;
+                            padding: $p-1 $p-9;
+                            border-bottom: 1px solid $color-gray-20;
+                            line-height: $lh-1 - 4;
+                            position: relative;
+                            &.fixedNavbar {
+                                line-height: $lh-1 - 4;
+                            }
+                            &.nav-divider {
+                                display: none;
+                            }
+
+                            span {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                width: 60px;
+                                height: 100%;
+                                font-size: $fs-1 + 2;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-left: 1px solid $color-gray-13;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media screen and (min-width: 992.02px) and (max-width: 1000px) {
+        #navbarMassive {
+
+            .navbar-nav {
+
+                .nav-item {
+                    .nav-link {
+
+                    }
+                }
+            }
+        }
+    }
+}

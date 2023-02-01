@@ -1,0 +1,40 @@
+.massiveCarousel{
+    padding: $p-6 0;
+    .massiveCarousel__content{
+        max-width: 720px;
+        margin: 0 auto;
+        .item{
+            text-align: center;
+            margin: $m-1;
+            img{
+                width: 100px;
+                height: 100px;
+                margin:0 auto $m-3;
+                border-radius: 50%;
+            }
+            .massiveCarousel__text{
+                &>p{
+                    @include  styleText($fs-1 - 4, $fw-0, $color-gray-0);
+                    font-style: italic;
+                    line-height: $lh-3;
+                    margin-bottom: $m-3;
+                }
+
+                .massiveCarousel__info{
+                    
+                    p{
+                        margin: 0;
+                        letter-spacing: $ls-0 + 1;
+                        @include styleText($fs-0 + 2, $fw-0, $color-black-0);
+                        text-transform: uppercase;
+                    }
+                    p:last-child{
+                        @include styleText($fs-0, $fw-0, $color-gray-0);
+                    }
+                }
+
+            }
+        }
+    }
+    
+}
